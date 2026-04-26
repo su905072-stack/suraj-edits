@@ -7,15 +7,15 @@
   <style>
     body {
       margin: 0;
-      background: #000; /* FULL DARK */
+      background: #000;
       font-family: Arial;
       color: white;
     }
 
     header {
       text-align: center;
-      padding: 16px;
-      font-size: 22px;
+      padding: 14px;
+      font-size: 20px;
       font-weight: bold;
       background: #000;
     }
@@ -23,30 +23,31 @@
     .container {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 20px;
-      padding: 15px;
+      gap: 18px;
+      padding: 12px;
     }
 
     .card {
-      background: #0f0f0f;
+      background: #000; /* FULL DARK FIX */
       border-radius: 16px;
-      padding: 12px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.8);
+      padding: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.8);
       text-align: center;
     }
 
-    /* VIDEO SIZE SMALL + SMOOTH */
+    /* VIDEO PERFECT SIZE + DARK */
     .card iframe {
       width: 100%;
       aspect-ratio: 9/16;
-      max-height: 300px; /* SMALLER VIDEO */
+      max-height: 280px;
+      background: #000;
       border-radius: 14px;
       border: none;
     }
 
     h3 {
-      margin: 12px 0;
-      font-size: 16px;
+      margin: 10px 0;
+      font-size: 15px;
     }
 
     /* GLASS BUTTON */
@@ -76,12 +77,11 @@
       transform: scale(1.03);
     }
 
-    /* SECOND BUTTON (HOW TO USE) */
     .btn2 {
       background: transparent;
       border: 1px solid rgba(255,255,255,0.3);
       font-size: 13px;
-      opacity: 0.8;
+      opacity: 0.85;
     }
 
   </style>
@@ -95,7 +95,9 @@
 
   <!-- Card 1 -->
   <div class="card">
-    <iframe src="https://www.youtube.com/embed/N4pu1BomxNY"></iframe>
+    <iframe 
+      src="https://www.youtube.com/embed/N4pu1BomxNY?controls=0&modestbranding=1&rel=0&playsinline=1">
+    </iframe>
 
     <h3>misstu</h3>
 
@@ -110,7 +112,9 @@
 
   <!-- Card 2 -->
   <div class="card">
-    <iframe src="https://drive.google.com/file/d/1sD1XzWSl4ZIA8TeUWOGiaPEWo-kysobR/preview"></iframe>
+    <iframe 
+      src="https://drive.google.com/file/d/1sD1XzWSl4ZIA8TeUWOGiaPEWo-kysobR/preview">
+    </iframe>
 
     <h3>new trend</h3>
 
