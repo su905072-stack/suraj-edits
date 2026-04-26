@@ -7,99 +7,81 @@
   <style>
     body {
       margin: 0;
-      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      background: #000; /* FULL DARK */
       font-family: Arial;
       color: white;
     }
 
     header {
       text-align: center;
-      padding: 18px;
-      font-size: 24px;
+      padding: 16px;
+      font-size: 22px;
       font-weight: bold;
       background: #000;
-      letter-spacing: 1px;
     }
 
     .container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 18px;
+      grid-template-columns: 1fr;
+      gap: 20px;
       padding: 15px;
     }
 
     .card {
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(12px);
-      border-radius: 15px;
+      background: #0f0f0f;
+      border-radius: 16px;
       padding: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      box-shadow: 0 0 20px rgba(0,0,0,0.8);
       text-align: center;
-      transition: 0.3s;
     }
 
-    .card:hover {
-      transform: scale(1.03);
-    }
-
+    /* VIDEO SIZE SMALL + SMOOTH */
     .card iframe {
       width: 100%;
       aspect-ratio: 9/16;
-      border-radius: 12px;
+      max-height: 300px; /* SMALLER VIDEO */
+      border-radius: 14px;
       border: none;
     }
 
     h3 {
       margin: 12px 0;
-      font-size: 15px;
+      font-size: 16px;
     }
 
     /* GLASS BUTTON */
-    button {
-      position: relative;
-      overflow: hidden;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      color: #fff;
+    .btn {
+      display: block;
+      margin-top: 8px;
       padding: 10px;
-      width: 100%;
       border-radius: 12px;
       font-size: 14px;
       font-weight: 600;
+      color: white;
+      text-decoration: none;
+
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.2);
+      backdrop-filter: blur(10px);
+
       box-shadow: 
         inset 0 0 10px rgba(255,255,255,0.1),
-        0 4px 15px rgba(0,0,0,0.4);
-      transition: all 0.3s ease;
+        0 4px 15px rgba(0,0,0,0.6);
+
+      transition: 0.3s;
     }
 
-    button:hover {
-      background: rgba(255, 255, 255, 0.15);
-      transform: scale(1.05);
-      box-shadow: 
-        inset 0 0 12px rgba(255,255,255,0.2),
-        0 6px 20px rgba(0,0,0,0.6);
+    .btn:hover {
+      background: rgba(255,255,255,0.15);
+      transform: scale(1.03);
     }
 
-    button::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(
-        120deg,
-        transparent,
-        rgba(255,255,255,0.4),
-        transparent
-      );
-      transition: 0.5s;
-    }
-
-    button:hover::before {
-      left: 100%;
+    /* SECOND BUTTON (HOW TO USE) */
+    .btn2 {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.3);
+      font-size: 13px;
+      opacity: 0.8;
     }
 
   </style>
@@ -113,20 +95,32 @@
 
   <!-- Card 1 -->
   <div class="card">
-    <iframe src="https://www.youtube.com/embed/N4pu1BomxNY" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/N4pu1BomxNY"></iframe>
+
     <h3>misstu</h3>
-    <button onclick="window.location.href='https://www.capcut.com/tv2/ZSm5pUBye/'">
-      Use Template
-    </button>
+
+    <a class="btn" href="https://www.capcut.com/tv2/ZSm5pUBye/">
+      Use Template on CapCut
+    </a>
+
+    <a class="btn btn2" href="#">
+      How to use template
+    </a>
   </div>
 
   <!-- Card 2 -->
   <div class="card">
     <iframe src="https://drive.google.com/file/d/1sD1XzWSl4ZIA8TeUWOGiaPEWo-kysobR/preview"></iframe>
+
     <h3>new trend</h3>
-    <button onclick="window.location.href='https://capcut-yt.onelink.me/W3Oy/?pid=template_sharing_q303&af_xp=social&af_force_deeplink=true&af_dp=capcut://template/detail?enter_from=template_share_t2&template_id=7605135645778005301&template_language=None'">
-      Use Template
-    </button>
+
+    <a class="btn" href="https://capcut-yt.onelink.me/W3Oy/?pid=template_sharing_q303&af_xp=social&af_force_deeplink=true&af_dp=capcut://template/detail?enter_from=template_share_t2&template_id=7605135645778005301&template_language=None">
+      Use Template on CapCut
+    </a>
+
+    <a class="btn btn2" href="#">
+      How to use template
+    </a>
   </div>
 
 </div>
