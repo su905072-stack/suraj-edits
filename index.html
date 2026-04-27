@@ -1,106 +1,101 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Suraj Edits</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body {
-  margin: 0;
-  background: #000;
-  font-family: Arial;
-  color: white;
-  text-align: center;
+
+body{
+margin:0;
+background:#000;
+font-family:Arial;
+color:white;
+text-align:center;
 }
 
 /* HEADER */
-header {
-  padding: 15px;
-  font-size: 22px;
-  font-weight: bold;
+header{
+padding:20px;
+font-size:24px;
+font-weight:bold;
 }
 
 /* TOP BUTTON */
-.pro-btn {
-  display: block;
-  margin: 10px auto 20px;
-  width: 85%;
-  padding: 12px;
-  border-radius: 14px;
-  text-decoration: none;
-  color: white;
-  font-weight: 600;
+.top-btn{
+margin:10px;
+padding:14px;
+border-radius:14px;
+font-size:15px;
+font-weight:bold;
+color:white;
+text-decoration:none;
+display:block;
 
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.2);
-
-  box-shadow: 0 5px 20px rgba(0,0,0,0.6);
+background:linear-gradient(45deg,#8a2be2,#ff00aa);
+box-shadow:0 0 15px rgba(255,0,200,0.4);
 }
 
 /* CONTAINER */
-.container {
-  padding: 10px;
+.container{
+display:flex;
+flex-direction:column-reverse;
+gap:20px;
+padding:15px;
 }
 
 /* CARD */
-.card {
-  background: #111;
-  border-radius: 18px;
-  padding: 12px;
-  margin-bottom: 20px;
+.card{
+background:#111;
+border-radius:18px;
+padding:12px;
+box-shadow:0 0 20px rgba(255,255,255,0.05);
 }
 
-/* VIDEO */
-iframe {
-  width: 100%;
-  height: 220px;
-  border-radius: 14px;
-  border: none;
+/* VIDEO FIX */
+iframe{
+width:100%;
+height:300px;
+border:none;
+border-radius:12px;
+object-fit:cover;
 }
 
 /* TITLE */
-h3 {
-  margin: 10px 0;
+h3{
+margin:10px 0;
 }
 
-/* BUTTON */
-.btn {
-  display: block;
-  margin: 8px 0;
-  padding: 12px;
-  border-radius: 12px;
-  text-decoration: none;
-  color: white;
-  font-weight: 600;
-
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.2);
+/* BUTTON BASE */
+.btn{
+display:block;
+margin:8px;
+padding:12px;
+border-radius:12px;
+text-decoration:none;
+color:white;
+font-size:14px;
+font-weight:bold;
 }
 
-.btn2 {
-  opacity: 0.8;
+/* BUTTON COLORS */
+.btn-main{
+background:linear-gradient(45deg,#ff00cc,#8a2be2);
 }
 
-/* FLOAT BUTTON */
-.floating {
-  position: fixed;
-  right: 10px;
-  top: 40%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.btn-help{
+background:linear-gradient(45deg,#00c6ff,#0072ff);
 }
 
-.floating button {
-  background: rgba(0,0,0,0.7);
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 50%;
-  font-size: 18px;
+.btn-share{
+background:linear-gradient(45deg,#ff512f,#dd2476);
 }
+
+/* HOVER */
+.btn:hover{
+opacity:0.85;
+}
+
 </style>
 </head>
 
@@ -108,83 +103,56 @@ h3 {
 
 <header>Suraj Edits</header>
 
-<a class="pro-btn" href="https://capcut.com">
-  👑 CapCut Pro Download Now
+<a class="top-btn" href="https://t.me/trending_edit_day/543?single">
+👑 CapCut Pro Download Now
 </a>
 
 <div class="container">
 
 <!-- NEW CARD (TOP) -->
-<div class="card" id="card1">
+<div class="card">
+
 <iframe src="https://drive.google.com/file/d/1RjHWue-emVN7FoFt0lc-5KIbDOYUYwko/preview"></iframe>
 
 <h3>template #1</h3>
 
-<a class="btn" href="https://capcut-yt.onelink.me/W3Oy/?pid=template_sharing_q303&af_xp=social&af_force_deeplink=true&af_dp=capcut://template/detail?enter_from=template_share_t2&template_id=7496006368361565493">
+<a class="btn btn-main" href="https://capcut-yt.onelink.me/W3Oy/?pid=template_sharing_q303&af_xp=social">
 Use Template on CapCut
 </a>
 
-<a class="btn btn2" href="#">How to use template</a>
+<a class="btn btn-help" href="#">
+How to use template
+</a>
 
-<button class="btn btn2" onclick="shareCard('card1')">
-Share this template
-</button>
+<a class="btn btn-share" href="#">
+🔗 Share this template
+</a>
+
 </div>
 
 
-<!-- SECOND CARD -->
-<div class="card" id="card2">
+<!-- OLD CARD -->
+<div class="card">
+
 <iframe src="https://www.youtube.com/embed/N4pu1BomxNY"></iframe>
 
 <h3>misstu</h3>
 
-<a class="btn" href="https://www.capcut.com/tv2/ZSm5pUBye/">
+<a class="btn btn-main" href="https://www.capcut.com/tv2/ZSm5pUBye/">
 Use Template on CapCut
 </a>
 
-<a class="btn btn2" href="#">How to use template</a>
+<a class="btn btn-help" href="#">
+How to use template
+</a>
 
-<button class="btn btn2" onclick="shareCard('card2')">
-Share this template
-</button>
+<a class="btn btn-share" href="#">
+🔗 Share this template
+</a>
+
 </div>
 
 </div>
-
-<!-- FLOAT BUTTON -->
-<div class="floating">
-<button onclick="like()">❤️</button>
-<button onclick="sharePage()">🔗</button>
-</div>
-
-<script>
-function like(){
- alert("Liked ❤️");
-}
-
-function sharePage(){
- if(navigator.share){
-   navigator.share({
-     title:"Suraj Edits",
-     url:window.location.href
-   });
- }
-}
-
-function shareCard(id){
- let url = window.location.href + "#" + id;
-
- if(navigator.share){
-   navigator.share({
-     title:"Template",
-     url:url
-   });
- } else {
-   navigator.clipboard.writeText(url);
-   alert("Link copied!");
- }
-}
-</script>
 
 </body>
 </html>
