@@ -1,161 +1,190 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Suraj Edits</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suraj Edits</title>
 
-  <style>
-    body {
-      margin: 0;
-      background: #000;
-      font-family: Arial;
-      color: white;
-    }
+<style>
+body {
+  margin: 0;
+  background: #000;
+  font-family: Arial;
+  color: white;
+  text-align: center;
+}
 
-    header {
-      text-align: center;
-      padding: 14px;
-      font-size: 20px;
-      font-weight: bold;
-      background: #000;
-    }
+/* HEADER */
+header {
+  padding: 15px;
+  font-size: 22px;
+  font-weight: bold;
+}
 
-    .container {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 18px;
-      padding: 12px;
-    }
+/* TOP BUTTON */
+.pro-btn {
+  display: block;
+  margin: 10px auto 20px;
+  width: 85%;
+  padding: 12px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
 
-    .card {
-      background: #000; /* FULL DARK FIX */
-      border-radius: 16px;
-      padding: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.8);
-      text-align: center;
-    }
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
 
-    /* VIDEO PERFECT SIZE + DARK */
-    .card iframe {
-      width: 100%;
-      aspect-ratio: 9/16;
-      max-height: 280px;
-      background: #000;
-      border-radius: 14px;
-      border: none;
-    }
+  box-shadow: 0 5px 20px rgba(0,0,0,0.6);
+}
 
-    h3 {
-      margin: 10px 0;
-      font-size: 15px;
-    }
+/* CONTAINER */
+.container {
+  padding: 10px;
+}
 
-    /* GLASS BUTTON */
-    .btn {
-      display: block;
-      margin-top: 8px;
-      padding: 10px;
-      border-radius: 12px;
-      font-size: 14px;
-      font-weight: 600;
-      color: white;
-      text-decoration: none;
+/* CARD */
+.card {
+  background: #111;
+  border-radius: 18px;
+  padding: 12px;
+  margin-bottom: 20px;
+}
 
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.2);
-      backdrop-filter: blur(10px);
+/* VIDEO */
+iframe {
+  width: 100%;
+  height: 220px;
+  border-radius: 14px;
+  border: none;
+}
 
-      box-shadow: 
-        inset 0 0 10px rgba(255,255,255,0.1),
-        0 4px 15px rgba(0,0,0,0.6);
+/* TITLE */
+h3 {
+  margin: 10px 0;
+}
 
-      transition: 0.3s;
-    }
+/* BUTTON */
+.btn {
+  display: block;
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
 
-    .btn:hover {
-      background: rgba(255,255,255,0.15);
-      transform: scale(1.03);
-    }
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+}
 
-    .btn2 {
-      background: transparent;
-      border: 1px solid rgba(255,255,255,0.3);
-      font-size: 13px;
-      opacity: 0.85;
-    }
+.btn2 {
+  opacity: 0.8;
+}
 
-  </style>
+/* FLOAT BUTTON */
+.floating {
+  position: fixed;
+  right: 10px;
+  top: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.floating button {
+  background: rgba(0,0,0,0.7);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 18px;
+}
+</style>
 </head>
 
 <body>
 
 <header>Suraj Edits</header>
 
+<a class="pro-btn" href="https://capcut.com">
+  👑 CapCut Pro Download Now
+</a>
+
 <div class="container">
-<div class="card">
-  <iframe 
-    src="https://drive.google.com/file/d/1RjHWue-emVN7FoFt0lc-5KIbDOYUYwko/preview">
-  </iframe>
 
-  <h3>template #1</h3>
+<!-- NEW CARD (TOP) -->
+<div class="card" id="card1">
+<iframe src="https://drive.google.com/file/d/1RjHWue-emVN7FoFt0lc-5KIbDOYUYwko/preview"></iframe>
 
-  <a class="btn" href="https://capcut-yt.onelink.me/W3Oy/?pid=template_sharing_q303&af_xp=social&af_force_deeplink=true&af_dp=capcut://template/detail?enter_from=template_share_t2&template_id=7496006368361565493&template_language=None">
-    Use Template on CapCut
-  </a>
+<h3>template #1</h3>
 
-  <a class="btn btn2" href="#">
-    How to use template
-  </a>
+<a class="btn" href="https://capcut-yt.onelink.me/W3Oy/?pid=template_sharing_q303&af_xp=social&af_force_deeplink=true&af_dp=capcut://template/detail?enter_from=template_share_t2&template_id=7496006368361565493">
+Use Template on CapCut
+</a>
+
+<a class="btn btn2" href="#">How to use template</a>
+
+<button class="btn btn2" onclick="shareCard('card1')">
+Share this template
+</button>
 </div>
-  <!-- Card 1 -->
-  <div class="card">
-    <iframe 
-      src="https://www.youtube.com/embed/N4pu1BomxNY?controls=0&modestbranding=1&rel=0&playsinline=1">
-    </iframe>
 
-    <h3>suraj</h3>
 
-    <a class="btn" href="https://www.capcut.com/tv2/ZSm5pUBye/">
-      Use Template on CapCut
-    </a>
+<!-- SECOND CARD -->
+<div class="card" id="card2">
+<iframe src="https://www.youtube.com/embed/N4pu1BomxNY"></iframe>
 
-    <a class="btn btn2" href="#">
-      How to use template
-    </a>
-  </div>
+<h3>misstu</h3>
 
-  <!-- Card 2 -->
-  <div class="card">
-    <iframe 
-      src="https://drive.google.com/file/d/1sD1XzWSl4ZIA8TeUWOGiaPEWo-kysobR/preview">
-    </iframe>
+<a class="btn" href="https://www.capcut.com/tv2/ZSm5pUBye/">
+Use Template on CapCut
+</a>
 
-    <h3>new trend</h3>
+<a class="btn btn2" href="#">How to use template</a>
 
-    <a class="btn" href="https://capcut-yt.onelink.me/W3Oy/?pid=template_sharing_q303&af_xp=social&af_force_deeplink=true&af_dp=capcut://template/detail?enter_from=template_share_t2&template_id=7605135645778005301&template_language=None">
-      Use Template on CapCut
-    </a>
-
-    <a class="btn btn2" href="#">
-      How to use template
-    </a>
-  </div>
-<div class="card">
-  <iframe 
-    src="https://drive.google.com/file/d/1RjHWue-emVN7FoFt0lc-5KIbDOYUYwko/preview">
-  </iframe>
-
-  <h3>template #1</h3>
-
-  <a class="btn" href="https://capcut-yt.onelink.me/W3Oy/?pid=template_sharing_q303&af_xp=social&af_force_deeplink=true&af_dp=capcut://template/detail?enter_from=template_share_t2&template_id=7496006368361565493&template_language=None">
-    Use Template on CapCut
-  </a>
-
-  <a class="btn btn2" href="#">
-    How to use template
-  </a>
+<button class="btn btn2" onclick="shareCard('card2')">
+Share this template
+</button>
 </div>
+
 </div>
+
+<!-- FLOAT BUTTON -->
+<div class="floating">
+<button onclick="like()">❤️</button>
+<button onclick="sharePage()">🔗</button>
+</div>
+
+<script>
+function like(){
+ alert("Liked ❤️");
+}
+
+function sharePage(){
+ if(navigator.share){
+   navigator.share({
+     title:"Suraj Edits",
+     url:window.location.href
+   });
+ }
+}
+
+function shareCard(id){
+ let url = window.location.href + "#" + id;
+
+ if(navigator.share){
+   navigator.share({
+     title:"Template",
+     url:url
+   });
+ } else {
+   navigator.clipboard.writeText(url);
+   alert("Link copied!");
+ }
+}
+</script>
 
 </body>
 </html>
