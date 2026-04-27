@@ -1,42 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Suraj Edits</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suraj Edits</title>
 
 <style>
-
 body{
 margin:0;
 background:#000;
 font-family:Arial;
-color:white;
+color:#fff;
 text-align:center;
 }
 
-/* HEADER */
 header{
 padding:20px;
 font-size:24px;
 font-weight:bold;
 }
 
-/* TOP BUTTON */
 .top-btn{
 margin:10px;
 padding:14px;
 border-radius:14px;
-font-size:15px;
-font-weight:bold;
-color:white;
-text-decoration:none;
 display:block;
-
+text-decoration:none;
+color:#fff;
+font-weight:bold;
 background:linear-gradient(45deg,#8a2be2,#ff00aa);
-box-shadow:0 0 15px rgba(255,0,200,0.4);
 }
 
-/* CONTAINER */
 .container{
 display:flex;
 flex-direction:column-reverse;
@@ -44,59 +37,50 @@ gap:20px;
 padding:15px;
 }
 
-/* CARD */
 .card{
 background:#111;
-border-radius:18px;
+border-radius:16px;
 padding:12px;
-box-shadow:0 0 20px rgba(255,255,255,0.05);
 }
 
-/* VIDEO FIX */
 iframe{
 width:100%;
 height:300px;
 border:none;
 border-radius:12px;
-object-fit:cover;
 }
 
-/* TITLE */
 h3{
 margin:10px 0;
 }
 
-/* BUTTON BASE */
 .btn{
 display:block;
 margin:8px;
 padding:12px;
 border-radius:12px;
 text-decoration:none;
-color:white;
+color:#fff;
 font-size:14px;
 font-weight:bold;
 }
 
-/* BUTTON COLORS */
-.btn-main{
-background:linear-gradient(45deg,#ff00cc,#8a2be2);
-}
-
-.btn-help{
-background:linear-gradient(45deg,#00c6ff,#0072ff);
-}
-
-.btn-share{
-background:linear-gradient(45deg,#ff512f,#dd2476);
-}
-
-/* HOVER */
-.btn:hover{
-opacity:0.85;
-}
-
+.btn-main{background:linear-gradient(45deg,#ff00cc,#8a2be2);}
+.btn-help{background:linear-gradient(45deg,#00c6ff,#0072ff);}
+.btn-share{background:linear-gradient(45deg,#ff512f,#dd2476);}
 </style>
+
+<script>
+function shareTemplate(title, url){
+if(navigator.share){
+navigator.share({title:title, url:url});
+}else{
+navigator.clipboard.writeText(url);
+alert("Link copied!");
+}
+}
+</script>
+
 </head>
 
 <body>
@@ -109,48 +93,45 @@ opacity:0.85;
 
 <div class="container">
 
-<!-- NEW CARD (TOP) -->
+<!-- TEMPLATE LOOP START -->
+
+<!-- Example Card -->
 <div class="card">
+<iframe src="https://drive.google.com/file/d/1LqFNpv4KtqXwZXQsg4uPrcQfKly1AFfs/preview"></iframe>
+<h3>Template #194</h3>
 
-<iframe src="https://drive.google.com/file/d/1RjHWue-emVN7FoFt0lc-5KIbDOYUYwko/preview"></iframe>
-
-<h3>template #1</h3>
-
-<a class="btn btn-main" href="https://capcut-yt.onelink.me/W3Oy/?pid=template_sharing_q303&af_xp=social&af_force_deeplink=true&af_dp=capcut://template/detail?enter_from=template_share_t2&template_id=7496006368361565493&template_language=None">
+<a class="btn btn-main" href="https://capcut-yt.onelink.me/W3Oy/?template_id=7493822567938133301">
 Use Template on CapCut
 </a>
 
-<a class="btn btn-help" href="#">
+<a class="btn btn-help" href="https://drive.google.com/file/d/1DEGwUfDO2_w_uh1yR0zoCgEyZsLcKKNs/view">
 How to use template
 </a>
 
-<a class="btn btn-share" href="#">
+<a class="btn btn-share" onclick="shareTemplate('Template 194', this.previousElementSibling.href)">
 🔗 Share this template
 </a>
-
 </div>
 
+<!-- COPY SAME FORMAT BELOW -->
 
-<!-- OLD CARD -->
 <div class="card">
-
-<iframe src="https://www.youtube.com/embed/N4pu1BomxNY"></iframe>
-
-<h3>Template#1</h3>
-
-<a class="btn btn-main" href="https://www.capcut.com/tv2/ZSm5pUBye/">
-Use Template on CapCut
-</a>
-
-<a class="btn btn-help" href="#">
-How to use template
-</a>
-
-<a class="btn btn-share" href="#">
-🔗 Share this template
-</a>
-
+<iframe src="https://drive.google.com/file/d/1oTw159F7FVZUbjMb_oK_9ibLwBnd22BS/preview"></iframe>
+<h3>Template #195</h3>
+<a class="btn btn-main" href="https://capcut-yt.onelink.me/W3Oy/?template_id=7494665896313556277">Use Template on CapCut</a>
+<a class="btn btn-help" href="https://drive.google.com/file/d/1DEGwUfDO2_w_uh1yR0zoCgEyZsLcKKNs/view">How to use template</a>
+<a class="btn btn-share" onclick="shareTemplate('Template 195', this.previousElementSibling.href)">🔗 Share this template</a>
 </div>
+
+<div class="card">
+<iframe src="https://drive.google.com/file/d/1W2Wz1b77V0DS6EzGVCCNwKvhQg4tFlQU/preview"></iframe>
+<h3>Template #197</h3>
+<a class="btn btn-main" href="https://capcut-yt.onelink.me/W3Oy/?template_id=7496050031766588725">Use Template on CapCut</a>
+<a class="btn btn-help" href="https://drive.google.com/file/d/1DEGwUfDO2_w_uh1yR0zoCgEyZsLcKKNs/view">How to use template</a>
+<a class="btn btn-share" onclick="shareTemplate('Template 197', this.previousElementSibling.href)">🔗 Share this template</a>
+</div>
+
+<!-- (Continue same pattern for all templates...) -->
 
 </div>
 
