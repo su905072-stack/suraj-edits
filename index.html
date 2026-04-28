@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Suraj Edits</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suraj Edits</title>
 
 <style>
-
 body{
 margin:0;
 background:#000;
@@ -14,27 +13,23 @@ color:white;
 text-align:center;
 }
 
-/* HEADER */
 header{
 padding:20px;
-font-size:26px;
+font-size:24px;
 font-weight:bold;
 }
 
-/* TOP BUTTON */
 .top-btn{
 margin:10px;
 padding:14px;
 border-radius:14px;
-font-size:15px;
-font-weight:bold;
+display:block;
 color:white;
 text-decoration:none;
-display:block;
+font-weight:bold;
 background:linear-gradient(45deg,#8a2be2,#ff00aa);
 }
 
-/* CONTAINER */
 .container{
 display:flex;
 flex-direction:column-reverse;
@@ -42,52 +37,56 @@ gap:20px;
 padding:15px;
 }
 
-/* CARD */
 .card{
 background:#111;
 border-radius:18px;
 padding:12px;
 }
 
-/* VIDEO */
 iframe{
 width:100%;
-height:300px;
+height:280px;
 border:none;
 border-radius:12px;
 }
 
-/* TITLE */
-h3{
-margin:10px 0;
-}
-
-/* BUTTON */
 .btn{
 display:block;
 margin:8px;
 padding:12px;
 border-radius:12px;
-text-decoration:none;
 color:white;
-font-size:14px;
+text-decoration:none;
 font-weight:bold;
 }
 
-/* COLORS */
-.btn-main{
-background:linear-gradient(45deg,#ff00cc,#8a2be2);
-}
-
-.btn-help{
-background:linear-gradient(45deg,#00c6ff,#0072ff);
-}
-
-.btn-share{
-background:linear-gradient(45deg,#ff512f,#dd2476);
-}
-
+.btn-main{background:linear-gradient(45deg,#ff00cc,#8a2be2);}
+.btn-help{background:linear-gradient(45deg,#00c6ff,#0072ff);}
+.btn-share{background:linear-gradient(45deg,#ff512f,#dd2476);}
 </style>
+
+<script>
+function shareTemplate(title, template, video, howto){
+const text = `${title}
+
+🎬 Template:
+${template}
+
+📺 Video:
+${video}
+
+📖 How to use:
+${howto}`;
+
+if(navigator.share){
+navigator.share({title:title, text:text});
+}else{
+navigator.clipboard.writeText(text);
+alert("Link copied!");
+}
+}
+</script>
+
 </head>
 
 <body>
@@ -100,49 +99,73 @@ background:linear-gradient(45deg,#ff512f,#dd2476);
 
 <div class="container">
 
-<!-- TEMPLATE LOOP START -->
-
-<!-- #250 -->
-<div class="card">
-<iframe src="https://drive.google.com/file/d/153B1c_p7w-LeWfvgkChcCkEOrwwR_pCY/preview"></iframe>
-<h3>Template #250</h3>
-<a class="btn btn-main" href="https://capcut-yt.onelink.me/W3Oy/?pid=template_sharing_q303&af_xp=social&af_force_deeplink=true&af_dp=capcut://template/detail?enter_from=template_share_t2&template_id=7523859052028235061&template_language=None">Use Template on CapCut</a>
-<a class="btn btn-help" href="https://drive.google.com/file/d/1DEGwUfDO2_w_uh1yR0zoCgEyZsLcKKNs/view?usp=drivesdk">How to use template</a>
-<a class="btn btn-share" onclick="shareLink('https://capcut-yt.onelink.me/W3Oy/?pid=template_sharing_q303&af_xp=social&af_force_deeplink=true&af_dp=capcut://template/detail?enter_from=template_share_t2&template_id=7523859052028235061&template_language=None')">Share this template</a>
-</div>
-
-<!-- #249 -->
-<div class="card">
-<iframe src="https://drive.google.com/file/d/1TPcVsR5udzrsNDpU24b3sUp2L8aUS8oi/preview"></iframe>
-<h3>Template #249</h3>
-<a class="btn btn-main" href="https://capcut-yt.onelink.me/W3Oy/?pid=template_sharing_q303&af_xp=social&af_force_deeplink=true&af_dp=capcut://template/detail?enter_from=template_share_t2&template_id=7513162099498011965&template_language=None">Use Template on CapCut</a>
-<a class="btn btn-help" href="https://drive.google.com/file/d/1DEGwUfDO2_w_uh1yR0zoCgEyZsLcKKNs/view?usp=drivesdk">How to use template</a>
-<a class="btn btn-share" onclick="shareLink('https://capcut-yt.onelink.me/W3Oy/?pid=template_sharing_q303&af_xp=social&af_force_deeplink=true&af_dp=capcut://template/detail?enter_from=template_share_t2&template_id=7513162099498011965&template_language=None')">Share this template</a>
-</div>
-
-<!-- #248 -->
-<div class="card">
-<iframe src="https://drive.google.com/file/d/1A7944i16YpQQrmfw_KwwkmiuptlF4Csi/preview"></iframe>
-<h3>Template #248</h3>
-<a class="btn btn-main" href="https://capcut-yt.onelink.me/W3Oy/?pid=template_sharing_q303&af_xp=social&af_force_deeplink=true&af_dp=capcut://template/detail?enter_from=template_share_t2&template_id=7521731246850919741&template_language=None">Use Template on CapCut</a>
-<a class="btn btn-help" href="https://drive.google.com/file/d/1DEGwUfDO2_w_uh1yR0zoCgEyZsLcKKNs/view?usp=drivesdk">How to use template</a>
-<a class="btn btn-share" onclick="shareLink('https://capcut-yt.onelink.me/W3Oy/?pid=template_sharing_q303&af_xp=social&af_force_deeplink=true&af_dp=capcut://template/detail?enter_from=template_share_t2&template_id=7521731246850919741&template_language=None')">Share this template</a>
-</div>
-
-<!-- ADD REST SAME STYLE (#247 → #194) -->
-
-</div>
-
+<!-- AUTO GENERATED CARDS -->
 <script>
-function shareLink(link){
-if(navigator.share){
-navigator.share({url:link});
-}else{
-navigator.clipboard.writeText(link);
-alert("Link copied!");
-}
-}
+
+const howto = "https://youtu.be/sWjPWRbE6lI?si=Xln3m4nYwMjKQwul";
+
+const data = [
+
+["#194","1LqFNpv4KtqXwZXQsg4uPrcQfKly1AFfs","https://capcut-yt.onelink.me/W3Oy/?template_id=7493822567938133301"],
+["#195","1oTw159F7FVZUbjMb_oK_9ibLwBnd22BS","https://capcut-yt.onelink.me/W3Oy/?template_id=7494665896313556277"],
+["#197","1W2Wz1b77V0DS6EzGVCCNwKvhQg4tFlQU","https://capcut-yt.onelink.me/W3Oy/?template_id=7496050031766588725"],
+["#198","1ucrrrj4fftEcTo0mvjyYUP_aasgrXb6t","https://capcut-yt.onelink.me/W3Oy/?template_id=7496429214669737269"],
+["#199","13R62hI7lL0GBmDGPkCS3APhFS9K903cD","https://capcut-yt.onelink.me/W3Oy/?template_id=7496568623285292341"],
+["#200","1aidfWIHSCJqEdh3twfCyie8prM_7gg1C","https://capcut-yt.onelink.me/W3Oy/?template_id=7496883097317739829"],
+["#201","1YfoX6l7b9G8aHTiJGXPQtZ0STMty70nx","https://capcut-yt.onelink.me/W3Oy/?template_id=7496006368361565493"],
+["#203","1QRgPzUsKjPw8Ox45vmcWUVW9y4zA6Pbb","https://capcut-yt.onelink.me/W3Oy/?template_id=7497986635791895861"],
+["#205","1xyNGJHHLO3WIoq9TCasD7vPQgSr-9Vq7","https://capcut-yt.onelink.me/W3Oy/?template_id=7499136444712193333"],
+["#206","1W02NYNKHc2PfwMN11mblRyCp9Gvg6jA4","https://capcut-yt.onelink.me/W3Oy/?template_id=7499724667037551933"],
+["#207","1BpdUdzMoVKmVGepjop3VyUoaNwSpyzCE","https://capcut-yt.onelink.me/W3Oy/?template_id=7486772235009592637"],
+["#208","1mefle39E7Rut6iKIBOYERlxqf2fieOhE","https://capcut-yt.onelink.me/W3Oy/?template_id=7329207298050755848"],
+["#209","1H16eKxUnFq7wdZpGrCpHl6o3lt2uVYN4","https://capcut-yt.onelink.me/W3Oy/?template_id=7500993194767797557"],
+["#234","1VGajUc8y_AOmIt1BEPz9-vvhI8mX1ISS","https://capcut-yt.onelink.me/W3Oy/?template_id=7394616647421824261"],
+["#235","12mR4rscbm0SmrwD_ClYLp4IIqh6jkKDF","https://capcut-yt.onelink.me/W3Oy/?template_id=7515815226684509493"],
+["#236","1D6MuoibjsGkq_3ig1tED6o6LFVa13WNf","https://capcut-yt.onelink.me/W3Oy/?template_id=7509133140900760885"],
+["#237","1sbGs58BJ9pdjIEDDWnZ9Cqk8VrjDbHf4","https://capcut-yt.onelink.me/W3Oy/?template_id=7516488514939145525"],
+["#238","1rzMaV8k_Q96ujfiCm0GyxyL1vpXdOI8g","https://capcut-yt.onelink.me/W3Oy/?template_id=7512705342099246397"],
+["#239","1PYGZYR1heOyQYKHrxwpvGuHlLSnwRcPv","https://capcut-yt.onelink.me/W3Oy/?template_id=7503937124467510581"],
+["#240","1ixmY42KdMauYpXFDX5vtCwOSVzTKcF9p","https://capcut-yt.onelink.me/W3Oy/?template_id=7461791908084387125"],
+["#241","1Am2uuGF2TYRcJM6WsbcsOEcVUSQovdz7","https://capcut-yt.onelink.me/W3Oy/?template_id=7517280242801642805"],
+["#242","1PBDJZbkCbPNPWdkUhOMQ8_lpEvd_sSqa","https://capcut-yt.onelink.me/W3Oy/?template_id=7517972937282964789"],
+["#243","1uqyC50_O05Kh8R3u5vvEdHjdessKtqoM","https://capcut-yt.onelink.me/W3Oy/?template_id=7210041469745368321"],
+["#244","1y5NYZLwrFJTRCT26GyWscdOVvsGzkmCL","https://capcut-yt.onelink.me/W3Oy/?template_id=7476351125415873845"],
+["#245","1XwRUU2cMibuWFV_pCPo9ElDj-zYKptxj","https://capcut-yt.onelink.me/W3Oy/?template_id=7500385878221557053"],
+["#246","1mwUVAOONtudtg58hHURKPf0EFu9p4Yhh","https://capcut-yt.onelink.me/W3Oy/?template_id=7491723344186789173"],
+["#247","11vg-o8T7IbE_LwNd4Irly3pKpF7gdLAj","https://capcut-yt.onelink.me/W3Oy/?template_id=7518109767957482813"],
+["#248","1A7944i16YpQQrmfw_KwwkmiuptlF4Csi","https://capcut-yt.onelink.me/W3Oy/?template_id=7521731246850919741"],
+["#249","1TPcVsR5udzrsNDpU24b3sUp2L8aUS8oi","https://capcut-yt.onelink.me/W3Oy/?template_id=7513162099498011965"],
+["#250","153B1c_p7w-LeWfvgkChcCkEOrwwR_pCY","https://capcut-yt.onelink.me/W3Oy/?template_id=7523859052028235061"]
+
+];
+
+data.forEach(d=>{
+document.write(`
+<div class="card">
+
+<iframe src="https://drive.google.com/file/d/${d[1]}/preview"></iframe>
+
+<h3>Template ${d[0]}</h3>
+
+<a class="btn btn-main" href="${d[2]}">
+Use Template on CapCut
+</a>
+
+<a class="btn btn-help" href="${howto}">
+How to use template
+</a>
+
+<button class="btn btn-share" onclick="shareTemplate('Template ${d[0]}','${d[2]}','https://drive.google.com/file/d/${d[1]}/view','${howto}')">
+Share this template
+</button>
+
+</div>
+`);
+});
+
 </script>
+
+</div>
 
 </body>
 </html>
