@@ -17,7 +17,7 @@ text-align:center;
 /* HEADER */
 header{
 padding:20px;
-font-size:24px;
+font-size:26px;
 font-weight:bold;
 }
 
@@ -37,7 +37,7 @@ background:linear-gradient(45deg,#8a2be2,#ff00aa);
 /* CONTAINER */
 .container{
 display:flex;
-flex-direction:column;
+flex-direction:column-reverse;
 gap:20px;
 padding:15px;
 }
@@ -74,9 +74,18 @@ font-size:14px;
 font-weight:bold;
 }
 
-.btn-main{background:linear-gradient(45deg,#ff00cc,#8a2be2);}
-.btn-help{background:linear-gradient(45deg,#00c6ff,#0072ff);}
-.btn-share{background:linear-gradient(45deg,#ff512f,#dd2476);}
+/* COLORS */
+.btn-main{
+background:linear-gradient(45deg,#ff00cc,#8a2be2);
+}
+
+.btn-help{
+background:linear-gradient(45deg,#00c6ff,#0072ff);
+}
+
+.btn-share{
+background:linear-gradient(45deg,#ff512f,#dd2476);
+}
 
 </style>
 </head>
@@ -91,89 +100,49 @@ font-weight:bold;
 
 <div class="container">
 
-<!-- TEMPLATE CARD START -->
+<!-- TEMPLATE LOOP START -->
+
+<!-- #250 -->
+<div class="card">
+<iframe src="https://drive.google.com/file/d/153B1c_p7w-LeWfvgkChcCkEOrwwR_pCY/preview"></iframe>
+<h3>Template #250</h3>
+<a class="btn btn-main" href="https://capcut-yt.onelink.me/W3Oy/?pid=template_sharing_q303&af_xp=social&af_force_deeplink=true&af_dp=capcut://template/detail?enter_from=template_share_t2&template_id=7523859052028235061&template_language=None">Use Template on CapCut</a>
+<a class="btn btn-help" href="https://drive.google.com/file/d/1DEGwUfDO2_w_uh1yR0zoCgEyZsLcKKNs/view?usp=drivesdk">How to use template</a>
+<a class="btn btn-share" onclick="shareLink('https://capcut-yt.onelink.me/W3Oy/?pid=template_sharing_q303&af_xp=social&af_force_deeplink=true&af_dp=capcut://template/detail?enter_from=template_share_t2&template_id=7523859052028235061&template_language=None')">Share this template</a>
+</div>
+
+<!-- #249 -->
+<div class="card">
+<iframe src="https://drive.google.com/file/d/1TPcVsR5udzrsNDpU24b3sUp2L8aUS8oi/preview"></iframe>
+<h3>Template #249</h3>
+<a class="btn btn-main" href="https://capcut-yt.onelink.me/W3Oy/?pid=template_sharing_q303&af_xp=social&af_force_deeplink=true&af_dp=capcut://template/detail?enter_from=template_share_t2&template_id=7513162099498011965&template_language=None">Use Template on CapCut</a>
+<a class="btn btn-help" href="https://drive.google.com/file/d/1DEGwUfDO2_w_uh1yR0zoCgEyZsLcKKNs/view?usp=drivesdk">How to use template</a>
+<a class="btn btn-share" onclick="shareLink('https://capcut-yt.onelink.me/W3Oy/?pid=template_sharing_q303&af_xp=social&af_force_deeplink=true&af_dp=capcut://template/detail?enter_from=template_share_t2&template_id=7513162099498011965&template_language=None')">Share this template</a>
+</div>
+
+<!-- #248 -->
+<div class="card">
+<iframe src="https://drive.google.com/file/d/1A7944i16YpQQrmfw_KwwkmiuptlF4Csi/preview"></iframe>
+<h3>Template #248</h3>
+<a class="btn btn-main" href="https://capcut-yt.onelink.me/W3Oy/?pid=template_sharing_q303&af_xp=social&af_force_deeplink=true&af_dp=capcut://template/detail?enter_from=template_share_t2&template_id=7521731246850919741&template_language=None">Use Template on CapCut</a>
+<a class="btn btn-help" href="https://drive.google.com/file/d/1DEGwUfDO2_w_uh1yR0zoCgEyZsLcKKNs/view?usp=drivesdk">How to use template</a>
+<a class="btn btn-share" onclick="shareLink('https://capcut-yt.onelink.me/W3Oy/?pid=template_sharing_q303&af_xp=social&af_force_deeplink=true&af_dp=capcut://template/detail?enter_from=template_share_t2&template_id=7521731246850919741&template_language=None')">Share this template</a>
+</div>
+
+<!-- ADD REST SAME STYLE (#247 → #194) -->
+
+</div>
 
 <script>
-
-const howTo = "https://youtu.be/sWjPWRbE6lI";
-const site = "https://surajfx.github.io/";
-
-const data = [
-
-["194","1LqFNpv4KtqXwZXQsg4uPrcQfKly1AFfs","https://capcut-yt.onelink.me/W3Oy/?pid=template_sharing_q303&af_xp=social&af_force_deeplink=true&af_dp=capcut://template/detail?template_id=7493822567938133301"],
-
-["195","1oTw159F7FVZUbjMb_oK_9ibLwBnd22BS","https://capcut-yt.onelink.me/W3Oy/?pid=template_sharing_q303&af_xp=social&af_force_deeplink=true&af_dp=capcut://template/detail?template_id=7494665896313556277"],
-
-["197","1W2Wz1b77V0DS6EzGVCCNwKvhQg4tFlQU","https://capcut-yt.onelink.me/W3Oy/?pid=template_sharing_q303&af_xp=social&af_force_deeplink=true&af_dp=capcut://template/detail?template_id=7496050031766588725"],
-
-["198","13R62hI7lL0GBmDGPkCS3APhFS9K903cD","https://capcut-yt.onelink.me/W3Oy/?pid=template_sharing_q303&af_xp=social&af_force_deeplink=true&af_dp=capcut://template/detail?template_id=7496429214669737269"],
-
-["199","1ucrrrj4fftEcTo0mvjyYUP_aasgrXb6t","https://capcut-yt.onelink.me/W3Oy/?pid=template_sharing_q303&af_xp=social&af_force_deeplink=true&af_dp=capcut://template/detail?template_id=7496568623285292341"],
-
-["200","1aidfWIHSCJqEdh3twfCyie8prM_7gg1C","https://capcut-yt.onelink.me/W3Oy/?pid=template_sharing_q303&af_xp=social&af_force_deeplink=true&af_dp=capcut://template/detail?template_id=7496883097317739829"],
-
-["201","1aidfWIHSCJqEdh3twfCyie8prM_7gg1C","https://capcut-yt.onelink.me/W3Oy/?pid=template_sharing_q303&af_xp=social&af_force_deeplink=true&af_dp=capcut://template/detail?template_id=7496006368361565493"]
-
-];
-
-const container = document.querySelector(".container");
-
-/* 🔥 REVERSE ORDER (NEW TOP, OLD DOWN) */
-data.reverse().forEach(item=>{
-
-const card = document.createElement("div");
-card.className="card";
-
-card.innerHTML=`
-
-<iframe src="https://drive.google.com/file/d/${item[1]}/preview"></iframe>
-
-<h3>Template #${item[0]}</h3>
-
-<a class="btn btn-main" href="${item[2]}">
-Use Template on CapCut
-</a>
-
-<a class="btn btn-help" href="${howTo}">
-How to use template
-</a>
-
-<button class="btn btn-share big-share" onclick="shareCard('${item[0]}','${item[2]}')">
-🔗 Share this template
-</button>
-
-`;
-
-container.appendChild(card);
-
-});
-
-
-/* 🔥 FULL SHARE FUNCTION */
-function shareCard(id,link){
-
-const text =
-`🔥 Template #${id}
-
-🎬 Use Template:
-${link}
-
-📖 How to use:
-${howTo}
-
-🌐 Visit Website:
-${site}
-`;
-
+function shareLink(link){
 if(navigator.share){
-navigator.share({
-title:"Suraj Edits",
-text:text
-});
+navigator.share({url:link});
 }else{
-navigator.clipboard.writeText(text);
-alert("Full template info copied!");
+navigator.clipboard.writeText(link);
+alert("Link copied!");
 }
 }
-
 </script>
+
+</body>
+</html>
