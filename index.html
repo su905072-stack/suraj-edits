@@ -1,85 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Suraj Edits</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suraj Edits</title>
 
 <style>
 body{
 margin:0;
 background:#000;
-font-family:Arial;
+font-family:sans-serif;
 color:white;
 text-align:center;
 }
 
-/* HEADER */
 header{
-padding:20px;
 font-size:24px;
 font-weight:bold;
-}
-
-/* TOP BUTTON */
-.top-btn{
-margin:10px;
-padding:14px;
-border-radius:14px;
-font-size:15px;
-font-weight:bold;
-color:white;
-text-decoration:none;
-display:block;
-background:linear-gradient(45deg,#8a2be2,#ff00aa);
-}
-
-/* CONTAINER */
-.container{
-display:flex;
-flex-direction:column-reverse;
-gap:20px;
 padding:15px;
 }
 
-/* CARD */
-.card{
-background:#111;
-border-radius:18px;
+.top-btn{
+margin:10px;
 padding:12px;
+border-radius:12px;
+background:linear-gradient(45deg,#7b2ff7,#f107a3);
+color:white;
+text-decoration:none;
+display:block;
 }
 
-/* VIDEO */
+.container{
+padding:10px;
+}
+
+.card{
+background:#111;
+border-radius:15px;
+padding:10px;
+margin:15px 0;
+}
+
 iframe{
 width:100%;
-height:300px;
+height:220px;
 border:none;
 border-radius:12px;
 }
 
-/* BUTTON */
+h3{
+margin:10px 0;
+}
+
 .btn{
 display:block;
-margin:8px;
-padding:12px;
-border-radius:12px;
+margin:8px 0;
+padding:10px;
+border-radius:10px;
 text-decoration:none;
 color:white;
-font-size:14px;
-font-weight:bold;
+background:#222;
 }
 
 .btn-main{
-background:linear-gradient(45deg,#ff00cc,#8a2be2);
+background:linear-gradient(45deg,#ff00cc,#3333ff);
 }
-
-.btn-help{
-background:linear-gradient(45deg,#00c6ff,#0072ff);
-}
-
-.btn-share{
-background:linear-gradient(45deg,#ff512f,#dd2476);
-}
-
 </style>
 </head>
 
@@ -95,7 +79,6 @@ background:linear-gradient(45deg,#ff512f,#dd2476);
 
 <!-- CARD 1 -->
 <div class="card">
-
 <iframe src="https://drive.google.com/file/d/1LqFNpv4KtqXwZXQsg4uPrcQfKly1AFfs/preview"></iframe>
 
 <h3>Template #194</h3>
@@ -104,21 +87,18 @@ background:linear-gradient(45deg,#ff512f,#dd2476);
 Use Template on CapCut
 </a>
 
-<a class="btn btn-help" href="https://youtu.be/sWjPWRbE6lI?si=Xln3m4nYwMjKQwul">
+<a class="btn" href="https://youtu.be/sWjPWRbE6lI?si=Xln3m4nYwMjKQwul">
 How to use template
 </a>
 
-<a class="btn btn-share"
-onclick="shareLink('https://surajfx.github.io/suraj-edits/card1')">
+<a class="btn" onclick="shareLink('card1.html')">
 🔗 Share this template
 </a>
 
 </div>
 
-
 <!-- CARD 2 -->
 <div class="card">
-
 <iframe src="https://drive.google.com/file/d/1oTw159F7FVZUbjMb_oK_9ibLwBnd22BS/preview"></iframe>
 
 <h3>Template #195</h3>
@@ -127,22 +107,18 @@ onclick="shareLink('https://surajfx.github.io/suraj-edits/card1')">
 Use Template on CapCut
 </a>
 
-<a class="btn btn-help" href="https://youtu.be/sWjPWRbE6lI?si=Xln3m4nYwMjKQwul">
+<a class="btn" href="https://youtu.be/sWjPWRbE6lI?si=Xln3m4nYwMjKQwul">
 How to use template
 </a>
 
-<a class="btn btn-share" onclick="shareCard('Template #195',
-'https://drive.google.com/file/d/1oTw159F7FVZUbjMb_oK_9ibLwBnd22BS/view',
-'https://capcut-yt.onelink.me/W3Oy/?pid=template_sharing_q303&af_xp=social&af_force_deeplink=true&af_dp=capcut://template/detail?enter_from=template_share_t2&template_id=7494665896313556277&template_language=None')">
+<a class="btn" onclick="shareLink('card2.html')">
 🔗 Share this template
 </a>
 
 </div>
 
-
 <!-- CARD 3 -->
 <div class="card">
-
 <iframe src="https://drive.google.com/file/d/1W2Wz1b77V0DS6EzGVCCNwKvhQg4tFlQU/preview"></iframe>
 
 <h3>Template #197</h3>
@@ -151,32 +127,29 @@ How to use template
 Use Template on CapCut
 </a>
 
-<a class="btn btn-help" href="https://youtu.be/sWjPWRbE6lI?si=Xln3m4nYwMjKQwul">
+<a class="btn" href="https://youtu.be/sWjPWRbE6lI?si=Xln3m4nYwMjKQwul">
 How to use template
 </a>
 
-<a class="btn btn-share" onclick="shareCard('Template #197',
-'https://drive.google.com/file/d/1W2Wz1b77V0DS6EzGVCCNwKvhQg4tFlQU/view',
-'https://capcut-yt.onelink.me/W3Oy/?pid=template_sharing_q303&af_xp=social&af_force_deeplink=true&af_dp=capcut://template/detail?enter_from=template_share_t2&template_id=7496050031766588725&template_language=None')">
+<a class="btn" onclick="shareLink('card3.html')">
 🔗 Share this template
 </a>
 
 </div>
 
-
 </div>
 
 <script>
-function shareCard(title, video, template){
-const text = title + "\n\n🎬 Video: " + video + "\n\n🔥 Template: " + template;
+function shareLink(page){
+let fullLink = window.location.origin + "/" + page;
 
 if(navigator.share){
 navigator.share({
-title: title,
-text: text
+title:"Suraj Edits",
+url: fullLink
 });
 }else{
-navigator.clipboard.writeText(text);
+navigator.clipboard.writeText(fullLink);
 alert("Link copied!");
 }
 }
