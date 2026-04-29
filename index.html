@@ -154,12 +154,38 @@ alert("Link copied!");
 }
 }
 </script>
-<footer style="text-align:center; padding:20px; color:#aaa;">
+<footer class="footer">
+  <div class="footer-links">
+    <a href="privacy.html">Privacy</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="terms.html">Terms</a>
+  </div>
   <p>© 2026 Suraj Edits</p>
-  <a href="privacy.html">Privacy</a> |
-  <a href="about.html">About</a> |
-  <a href="contact.html">Contact</a> |
-  <a href="terms.html">Terms</a>
 </footer>
+
+<style>
+.footer{
+  margin-top:40px;
+  padding:25px 10px;
+  text-align:center;
+  background:#0a0a0a;
+  color:#aaa;
+  border-top:1px solid rgba(255,255,255,0.1);
+}
+.footer-links{
+  margin-bottom:10px;
+}
+.footer-links a{
+  color:#ccc;
+  margin:0 10px;
+  text-decoration:none;
+  font-size:14px;
+  transition:0.3s;
+}
+.footer-links a:hover{
+  color:#a855f7;
+}
+</style>
 </body>
 </html>
