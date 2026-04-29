@@ -12,86 +12,111 @@
 
 <style>
 body{
-  margin:0;
-  font-family:sans-serif;
-  background:#0d0d0d;
-  color:white;
+/* ===== FULL PAGE BACKGROUND ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #0f0f0f, #000000 80%);
+  color: #ffffff;
 }
 
-/* HEADER */
-header{
-  text-align:center;
-  font-size:28px;
-  font-weight:bold;
-  padding:20px;
+/* ===== CONTAINER ===== */
+.container {
+  padding: 15px;
 }
 
-/* TOP BUTTON */
-.top-btn{
-  display:block;
-  margin:10px auto;
-  width:90%;
-  text-align:center;
-  padding:12px;
-  border-radius:12px;
-  background:linear-gradient(45deg,#8a2be2,#ff00cc);
-  color:white;
-  text-decoration:none;
-  font-weight:600;
+/* ===== HEADER ===== */
+header {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  margin: 20px 0;
+  letter-spacing: 1px;
 }
 
-/* CARD */
-.card{
-  width:90%;
-  margin:20px auto;
-  background:#111;
-  border-radius:16px;
-  padding:15px;
-  box-shadow:0 0 15px rgba(255,255,255,0.05);
+/* ===== CARD DESIGN ===== */
+.card {
+  background: rgba(20, 20, 20, 0.95);
+  border-radius: 20px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 
+    0 0 20px rgba(255, 0, 255, 0.08),
+    0 0 40px rgba(0, 150, 255, 0.05);
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
 }
 
-/* VIDEO */
-iframe{
-  width:100%;
-  height:220px;
-  border:none;
-  border-radius:12px;
+.card:hover {
+  transform: translateY(-4px);
 }
 
-/* TITLE */
-.card h3{
-  text-align:center;
+/* ===== VIDEO FRAME ===== */
+iframe {
+  width: 100%;
+  height: 220px;
+  border-radius: 15px;
+  border: none;
 }
 
-/* BUTTON */
-.btn{
-  display:block;
-  margin:10px 0;
-  padding:12px;
-  text-align:center;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:600;
+/* ===== TEMPLATE TITLE ===== */
+h3 {
+  text-align: center;
+  margin: 12px 0;
+  font-size: 20px;
 }
 
-/* USE TEMPLATE */
-.btn-main{
-  background:linear-gradient(45deg,#ff00cc,#3333ff);
-  color:white;
+/* ===== BUTTON BASE ===== */
+.btn {
+  display: block;
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
 }
 
-/* HOW TO USE */
-.btn-help{
-  background:linear-gradient(45deg,#ff9900,#ff3366);
-  color:white;
+/* ===== MAIN BUTTON ===== */
+.btn-main {
+  background: linear-gradient(90deg, #ff00cc, #3333ff);
+  box-shadow: 0 0 12px rgba(255, 0, 255, 0.5);
 }
 
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:20px;
-  font-size:14px;
-  opacity:0.7;
+/* ===== HOW TO USE BUTTON ===== */
+.btn-help {
+  background: linear-gradient(90deg, #ff7a00, #ff0066);
+  box-shadow: 0 0 12px rgba(255, 100, 0, 0.5);
+}
+
+/* ===== BUTTON HOVER ===== */
+.btn:hover {
+  transform: scale(1.03);
+}
+
+/* ===== TOP DOWNLOAD BUTTON ===== */
+.top-btn {
+  display: block;
+  text-align: center;
+  margin: 15px;
+  padding: 14px;
+  border-radius: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(90deg, #7b00ff, #ff00cc);
+  box-shadow: 0 0 20px rgba(180, 0, 255, 0.6);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  font-size: 14px;
+  padding: 20px;
+  color: #888;
 }
 footer a{
   color:#aaa;
