@@ -3,207 +3,188 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Suraj Prompts | AI Image Prompts</title>
-
-<meta name="description" content="Best AI image prompts for ChatGPT & Gemini. Copy and generate stunning images instantly.">
-<meta name="keywords" content="AI prompts, image prompts, ChatGPT prompts, Gemini prompts">
-<meta name="author" content="Suraj Prompts">
+<title>Suraj Prompts</title>
 
 <style>
-
-/* RESET */
-*{margin:0;padding:0;box-sizing:border-box;}
-
-/* BODY */
-body{
-background:#000;
-color:#fff;
-font-family:sans-serif;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0a0a0a;
+    color: white;
 }
 
 /* HEADER */
-header{
-text-align:center;
-font-size:26px;
-font-weight:700;
-margin:20px 0;
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: #111;
 }
 
-/* TOP BUTTON */
-.top-btn{
-display:block;
-margin:15px;
-padding:14px;
-text-align:center;
-border-radius:15px;
-text-decoration:none;
-color:#fff;
-background:linear-gradient(90deg,#00ff87,#00c9ff);
+.logo {
+    color: #8A2BE2;
+    font-weight: bold;
+}
+
+.top-btn {
+    background: #8A2BE2;
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
 }
 
 /* SEARCH */
-.search{
-width:90%;
-margin:10px auto;
-display:block;
-padding:12px;
-border-radius:10px;
-border:none;
+.search {
+    width: 90%;
+    margin: 15px auto;
+    display: block;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
 }
 
-/* CATEGORY */
-.filter{
-text-align:center;
-margin:10px;
+/* FILTER */
+.filter {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.filter button {
+    margin: 5px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-.filter button{
-margin:5px;
-padding:8px 12px;
-border:none;
-border-radius:10px;
-background:#222;
-color:#fff;
+/* CARDS */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 15px;
 }
 
-/* CARD */
-.card{
-background:#111;
-margin:15px;
-padding:15px;
-border-radius:20px;
+.card {
+    background: #111;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #8A2BE2;
 }
 
-.card img{
-width:100%;
-border-radius:15px;
+.card img {
+    width: 100%;
+    border-radius: 10px;
 }
 
-h3{
-text-align:center;
-margin:10px 0;
+.card h3 {
+    color: cyan;
 }
 
-.btn{
-display:block;
-margin-top:10px;
-padding:12px;
-border-radius:12px;
-text-align:center;
-color:#fff;
-border:none;
+.prompt {
+    max-height: 120px;
+    overflow-y: auto;
+    font-size: 13px;
+    color: #ccc;
 }
 
-.btn-copy{
-background:linear-gradient(90deg,#ff00cc,#3333ff);
+.copy-btn {
+    width: 100%;
+    padding: 10px;
+    background: cyan;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
 }
-
-footer{
-text-align:center;
-padding:20px;
-color:#888;
-}
-
 </style>
 </head>
-<body>
-  <header>Suraj Prompts</header>
 
-<a class="top-btn" href="https://whatsapp.com/channel/0029Vb8LDSC7z4kcrtFkae2k">
-🔥 Join My WhatsApp Channel
-</a>
+<body>
+
+<header>
+    <div class="logo">Suraj Prompts</div>
+    <a class="top-btn" href="https://whatsapp.com/...">Join WhatsApp</a>
+</header>
 
 <input type="text" class="search" placeholder="Search prompts..." onkeyup="searchPrompt(this.value)">
 
 <div class="filter">
-<button onclick="filter('all')">All</button>
-<button onclick="filter('cinematic')">Cinematic</button>
-<button onclick="filter('anime')">Anime</button>
-<button onclick="filter('realistic')">Realistic</button>
+    <button onclick="filter('all')">All</button>
+    <button onclick="filter('cinematic')">Cinematic</button>
+    <button onclick="filter('anime')">Anime</button>
+    <button onclick="filter('realistic')">Realistic</button>
 </div>
+
+<div class="container">
+
 <!-- CARD 1 -->
-<div class="card">
-
-    <img src="https://i.postimg.cc/PJ923c9w/file-0000000034a871fabbee0e2bdde929ab.png" alt="Cinematic Indian Girl Prompt">
-
-    <h3>Cinematic Indian Girl Collage</h3>
-
-    <div class="prompt">
-A warm-toned cinematic portrait collage of a young woman with soft glowing skin, subtle freckles, and glossy nude lips. She has long dark brown hair styled in loose waves with face-framing strands. She is wearing traditional gold jhumka earrings and a delicate necklace, dressed in a deep maroon outfit with a sheer dupatta around the neck. The lighting is golden-hour inspired with rich amber highlights and soft shadows, creating a cozy, intimate mood.
-
-The composition is a collage layout with multiple cropped frames of her face—close-ups of eyes, lips, and side profile arranged aesthetically. Add soft floral elements like beige and orange lilies placed around the frame. Include a blurred music player overlay showing a song playing for a nostalgic vibe. Skin appears dewy and radiant, with minimal elegant makeup.
-
-Style: soft glam, editorial, aesthetic Instagram collage, warm color grading, high detail, shallow depth of field, cinematic lighting, 4K, ultra-realistic.
-    </div>
-
-    <button class="copy-btn" onclick="copyText(this)">Copy Prompt</button>
-
+<div class="card cinematic">
+<img src="https://i.postimg.cc/PJ923c9w/file-0000000034a871fabbee0e2bdde929ab.png">
+<h3>Cinematic Indian Girl</h3>
+<div class="prompt">
+A warm-toned cinematic portrait collage of a young woman with soft glowing skin, subtle freckles, and glossy nude lips. She has long dark brown hair styled in loose waves with face-framing strands. She is wearing traditional gold jhumka earrings and a delicate necklace, dressed in a deep maroon outfit with a sheer dupatta around the neck. The lighting is golden-hour inspired with rich amber highlights and soft shadows, creating a cozy, intimate mood. The composition is a collage layout with multiple cropped frames of her face—close-ups of eyes, lips, and side profile arranged aesthetically. Add soft floral elements like beige and orange lilies placed around the frame. Include a blurred music player overlay showing a song playing for a nostalgic vibe. Skin appears dewy and radiant, with minimal elegant makeup. Style: soft glam, editorial, aesthetic Instagram collage, warm color grading, high detail, shallow depth of field, cinematic lighting, 4K, ultra-realistic.
+</div>
+<button class="copy-btn" onclick="copyText(this)">Copy Prompt</button>
 </div>
 
 <!-- CARD 2 -->
 <div class="card anime">
-<img src="https://via.placeholder.com/500x300">
-
+<img src="https://via.placeholder.com/300">
 <h3>Anime Style</h3>
-
-<p id="p2">
+<div class="prompt">
 Anime girl, vibrant colors, soft glow, high detail, studio ghibli style
-</p>
-
-<button class="btn btn-copy" onclick="copyText('p2')">Copy Prompt</button>
+</div>
+<button class="copy-btn" onclick="copyText(this)">Copy Prompt</button>
 </div>
 
 <!-- CARD 3 -->
 <div class="card realistic">
-<img src="https://via.placeholder.com/500x300">
-
+<img src="https://via.placeholder.com/300">
 <h3>Realistic Photo</h3>
-
-<p id="p3">
+<div class="prompt">
 Hyper realistic photo, natural skin, DSLR lens, ultra HD, sharp focus
-</p>
+</div>
+<button class="copy-btn" onclick="copyText(this)">Copy Prompt</button>
+</div>
 
-<button class="btn btn-copy" onclick="copyText('p3')">Copy Prompt</button>
 </div>
 
 <script>
+/* COPY FUNCTION */
+function copyText(btn) {
+    let text = btn.parentElement.querySelector(".prompt").innerText;
+    navigator.clipboard.writeText(text);
 
-/* COPY */
-function copyText(id){
-let text=document.getElementById(id).innerText;
-navigator.clipboard.writeText(text);
-alert("Copied!");
+    btn.innerText = "Copied!";
+    setTimeout(() => {
+        btn.innerText = "Copy Prompt";
+    }, 2000);
 }
 
 /* SEARCH */
-function searchPrompt(value){
-value=value.toLowerCase();
-let cards=document.querySelectorAll(".card");
+function searchPrompt(value) {
+    value = value.toLowerCase();
+    let cards = document.querySelectorAll(".card");
 
-cards.forEach(card=>{
-card.style.display=card.innerText.toLowerCase().includes(value) ? "block" : "none";
-});
+    cards.forEach(card => {
+        card.style.display = card.innerText.toLowerCase().includes(value) ? "block" : "none";
+    });
 }
 
 /* FILTER */
-function filter(type){
-let cards=document.querySelectorAll(".card");
+function filter(type) {
+    let cards = document.querySelectorAll(".card");
 
-cards.forEach(card=>{
-if(type=="all" || card.classList.contains(type)){
-card.style.display="block";
-}else{
-card.style.display="none";
+    cards.forEach(card => {
+        if(type === "all" || card.classList.contains(type)){
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
 }
-});
-}
-
 </script>
-
-<footer>
-© 2026 Suraj Prompts
-</footer>
 
 </body>
 </html>
