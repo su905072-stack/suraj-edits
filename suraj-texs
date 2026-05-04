@@ -773,4 +773,162 @@ footer{text-align:center;padding:36px 16px 20px;border-top:1px solid var(--borde
         </div>
       </div>
     </div>
+    <div class="nr" id="nr">
+      <div class="nr-i">🔍</div>
+      <h3>No templates found</h3>
+      <p>Try a different search or category.</p>
+    </div>
+  </div>
+</div>
 
+<a href="https://surajfx.github.io/suraj-edits" target="_blank" class="fbtn">🤖 All AI Prompt</a>
+
+<footer>
+  <div class="fl">
+    <a href="#">Privacy Policy</a>
+    <a href="#">About Us</a>
+    <a href="#">Contact</a>
+    <a href="#">Terms &amp; Conditions</a>
+  </div>
+  <div class="fc">© 2025 <span class="fb2">Suraj Edits</span>. All rights reserved.</div>
+</footer>
+
+<!-- Firebase -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getDatabase, ref, onValue, runTransaction }
+    from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+  const app = initializeApp({
+    apiKey:"AIzaSyDCb00ReMC3BScf1E51pvsp9F6Denq5nqM",
+    authDomain:"surajfx-dbfbf.firebaseapp.com",
+    databaseURL:"https://surajfx-dbfbf-default-rtdb.firebaseio.com",
+    projectId:"surajfx-dbfbf",
+    storageBucket:"surajfx-dbfbf.firebasestorage.app",
+    messagingSenderId:"1082799197835",
+    appId:"1:1082799197835:web:50a062f8f00f49c3570e8e"
+  });
+  const db = getDatabase(app);
+  const IDS=['t250','t249','t248','t247','t246','t245','t244','t243','t242','t241',
+             't240','t239','t238','t237','t236','t235','t234','t209','t208','t207',
+             't206','t205','t203','t201','t200','t199','t198','t197','t195','t194'];
+  const counts={};
+
+  function fmt(n){
+    if(n>=1000000) return (n/1000000).toFixed(1).replace('.0','')+'M';
+    if(n>=1000) return (n/1000).toFixed(1).replace('.0','')+'K';
+    return String(n);
+  }
+
+  IDS.forEach(id=>{
+    onValue(ref(db,'uses/'+id),snap=>{
+      const v=snap.val()||0;
+      counts[id]=v;
+      const el=document.getElementById('c_'+id);
+      if(el) el.textContent=fmt(v);
+      if(window._af==='trending') window._rt&&window._rt();
+    });
+  });
+
+  window.inc=function(id){
+    runTransaction(ref(db,'uses/'+id),c=>(c||0)+1);
+  };
+  window._counts=counts;
+
+  window._rt=function(){
+    const grid=document.getElementById('grid');
+    const nr=document.getElementById('nr');
+    const all=Array.from(document.querySelectorAll('.card[data-id]'));
+    const sorted=all.map(c=>({c,v:counts[c.dataset.id]||0})).sort((a,b)=>b.v-a.v).slice(0,10);
+    all.forEach(c=>{
+      c.style.display='none';
+      const rb=c.querySelector('.rank-badge');
+      if(rb){rb.style.display='none';rb.textContent='';}
+    });
+    sorted.forEach(({c},i)=>{
+      c.style.display='';
+      const rb=c.querySelector('.rank-badge');
+      if(rb){
+        rb.style.display='block';
+        rb.textContent='#'+(i+1);
+        rb.style.background=i===0?'rgba(251,191,36,.25)':i===1?'rgba(156,163,175,.25)':i===2?'rgba(180,83,9,.25)':'rgba(168,85,247,.15)';
+      }
+      grid.appendChild(c);
+    });
+    nr.classList.toggle('show',sorted.length===0);
+    document.getElementById('scount').textContent='Top '+sorted.length;
+    document.getElementById('stitle').textContent='🔥 Trending Templates';
+  };
+</script>
+
+<script>
+  const inp=document.getElementById('searchInput');
+  const nr=document.getElementById('nr');
+  const scount=document.getElementById('scount');
+  const stitle=document.getElementById('stitle');
+  window._af='all';
+
+  function doFilter(){
+    const raw=inp.value.toLowerCase().trim();
+    const num=raw.replace(/template/gi,'').replace(/#/g,'').trim();
+    const af=window._af;
+    if(af==='trending'){window._rt&&window._rt();return;}
+
+    // For AI filter show only ai-card, hide regular cards
+    const allCards=document.querySelectorAll('.card[data-id], .ai-card[data-id]');
+    let vis=0;
+    allCards.forEach(c=>{
+      const rb=c.querySelector('.rank-badge');
+      if(rb){rb.style.display='none';rb.textContent='';}
+      const cn=c.dataset.num||'';
+      const cat=c.dataset.cat;
+      const isAI=cat==='ai';
+
+      let matchS=true;
+      if(raw!==''){
+        // AI cards don't match number search
+        if(isAI) matchS=false;
+        else matchS=cn.includes(num)||cn===num;
+      }
+      const matchF=af==='all'||(af==='ai'&&isAI)||(!isAI&&cat===af);
+      c.style.display=(matchS&&matchF)?'':'none';
+      if(matchS&&matchF) vis++;
+    });
+
+    nr.classList.toggle('show',vis===0);
+    scount.textContent=vis+' template'+(vis!==1?'s':'');
+    stitle.textContent=af==='cinematic'?'🎬 Cinematic Templates':af==='ai'?'🤖 AI Prompt':af==='trending'?'🔥 Trending':'🎯 Latest Templates';
+  }
+
+  inp.addEventListener('input',doFilter);
+
+  document.querySelectorAll('.fb').forEach(b=>{
+    b.addEventListener('click',()=>{
+      document.querySelectorAll('.fb').forEach(x=>x.classList.remove('active'));
+      b.classList.add('active');
+      window._af=b.dataset.f;
+      if(window._af==='trending') inp.value='';
+      doFilter();
+    });
+  });
+
+  // Entrance animation
+  const obs=new IntersectionObserver(en=>{
+    en.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.style.opacity='1';
+        e.target.style.transform='translateY(0)';
+        obs.unobserve(e.target);
+      }
+    });
+  },{threshold:.06});
+
+  document.querySelectorAll('.card[data-id], .ai-card[data-id]').forEach((c,i)=>{
+    c.style.opacity='0';
+    c.style.transform='translateY(22px)';
+    c.style.transition=`opacity .5s ${i*0.03}s ease, transform .5s ${i*0.03}s ease`;
+    obs.observe(c);
+  });
+</script>
+</body>
+</html>
